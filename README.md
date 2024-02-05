@@ -1,5 +1,5 @@
 # SAVANA_API
-SAVANA: Secure AI Verification and Analysis Network Architecture
+SAVANA: Secure AI Verification And Non-deceptive Analysis
 
 Overview:
 Savana is an advanced open-source project designed for robust deep fake detection and AI content analysis. Leveraging cutting-edge algorithms, it offers a comprehensive solution for ensuring the authenticity and integrity of visual content in the digital space.
