@@ -1,95 +1,76 @@
-# React.js landing page template v2
+<h2 align="center">
+  Portfolio Website - v2.0<br/>
+  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
+</h2>
+<div align="center">
+  <img alt="Demo" src="./Images/readme-img1.png" />
+</div>
 
-## <a href="https://react-landing-page-template-2021.vercel.app/"> LIVE DEMO</a>
+<br/>
 
-<img src="public/assets/gifs/demo.gif" width="100%" height="auto" />
+<center>
 
-### Description
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
+![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
+![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)
 
-This is a React.js/Next.js based landing page plug-n-play template, ideal for startups/companies/service providers wanting to showcase their vision in a single page sleek and modern landing page.
+</center>
 
-### Features
+<h3 align="center">
+    🔹
+    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
+    🔹
+    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
+</h3>
 
-- 📱  Responsive design
-- 🔥 [Next.js](https://nextjs.org) for Static Site Generator
+## TL;DR
 
-- 🎨 Integrate with [Tailwind CSS](https://tailwindcss.com) (w/ JIT mode)
+You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
 
-- 💅 PostCSS for processing Tailwind CSS and integrated to `styled-jsx`
+## Built With
 
-- 🎉 Type checking [TypeScript](https://www.typescriptlang.org)
+My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
 
-- 🗂 VSCode configuration: Debug, Settings, Tasks and extension for PostCSS, ESLint, Prettier, TypeScript
+This project was built using these technologies.
 
-- 🤖 SEO metadata, JSON-LD and Open Graph tags with Next SEO
+- React.js
+- Node.js
+- Express.js
+- CSS3
+- VsCode
+- Vercel
 
-- 🖱️ One click deployment with Vercel or Netlify (or manual deployment to any hosting services)
+## Features
 
-Built-in feature from Next.js:
+**📖 Multi-Page Layout**
 
-- ☕ Minify HTML & CSS
-- 💨 Live reload
-- ✅ Cache busting
+**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
 
-### Make it your own
+**📱 Fully Responsive**
 
-#### 1. Clone repo
+## Getting Started
 
-```
-git clone https://github.com/issaafalkattan/react-landing-page-template-2021.git
-cd react-landing-page-template-2021
-yarn
-```
+Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
 
-Then, you can run locally in development mode with live reload:
+## 🛠 Installation and Setup Instructions
 
-```
-yarn dev
-```
+1. Installation: `npm install`
 
-Open <http://localhost:3000> with your favorite browser to see your project.
+2. In the project directory, you can run: `npm start`
 
-#### 2. Add your own content
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The page will reload if you make edits.
 
- 1. **Content**: change the configuration in the ```src/config/index.json``` file to change the content of the landing page to match your use ```src/config/index.json```  folder and .
- 2. **Images**:  add any images/icons..etc to the ```public/assets/images```  folder and update their reference source in ```src/config/index.json```.
- 3. **Theme**:  to change the theme, update the ```tailwind.config.js```  file to match the theme of your branding. [Tutorial](https://tailwindcss.com/docs/configuration).
+## Usage Instructions
 
-#### 3. Deploy to production
+Open the project folder and Navigate to `/src/components/`. <br/>
+You will find all the components used and you can edit your information accordingly.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fissaafalkattan%2Freact-landing-page-template-2021)
+### Show your support
 
-##### Deploy manually
+Give a ⭐ if you like this website!
 
-You can see the results locally in production mode with:
-
-  ```
-yarn build
-yarn start
-```
-
-The generated HTML and CSS files are minified (built-in feature from Next js). It will also removed unused CSS from [Tailwind CSS](https://tailwindcss.com).
-
-You can create an optimised production build with:
-
-```
-yarn build-prod
-```
-
-### Contributions
-
-Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug.
-
-### License
-
-Licensed under the MIT License, Copyright © 2021
-  
-
-## Liked this template? <a href="https://www.buymeacoffee.com/issaaf">Buy me a coffee ☕️</a>
-
-
-
-
----
-
-### Looking for v1? <a href="https://github.com/issaafalkattan/React-Landing-Page-Template">V1</a>
+<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
