@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
+import Login from './login'
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +20,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false)
+  const [email, setEmail] = useState('')
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,14 +31,40 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+
+  useEffect(() => {
+    // Fetch the user email and token from local storage
+    const user = JSON.parse(localStorage.getItem('user'))
+  
+    // If the token/email does not exist, mark the user as logged out
+    if (!user || !user.token) {
+      setLoggedIn(false)
+      return
+    }
+  
+    // If the token exists, verify it with the auth server to see if it is valid
+    fetch('http://localhost:5003/verify', {
+      method: 'POST',
+      headers: {
+        'jwt-token': user.token,
+      },
+    })
+      .then((r) => r.json())
+      .then((r) => {
+        setLoggedIn('success' === r.message)
+        setEmail(user.email || '')
+      })
+  }, [])
+
   return (
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
-        <Routes>
+        <Routes>  
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
           <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />

@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "email": "sjc@gmail.com",
+      "password": "$2b$10$x2Pi5xebCwSArJnURVe2juc8o0qFCqy9B/sdmd8MjsjnD3L1PLWvy"
+    },
+    {
+      "email": "sjc1@gmail.com",
+      "password": "$2b$10$FVyLQAENiYgjFSmY8fMfVeH.9upxveUwDGX0mC8bft4wzAO5Ixuem"
+    }
+  ]
+}
