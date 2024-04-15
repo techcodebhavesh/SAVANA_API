@@ -61,7 +61,7 @@ async function run(text) {
   const result = await model.generateContent([prompt1]);
   //console.log(result);
   reply = await result.response;
-  text = reply.text();
+  text = reply.text(); 
   return text;
   console.log(text);
   // console.log(reply);

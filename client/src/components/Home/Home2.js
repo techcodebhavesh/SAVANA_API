@@ -16,13 +16,13 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+               <span className="purple"> SAVANA </span> API
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+             
+Detecting deepfakes and AI-generated content has become increasingly crucial in today's digital landscape. To combat the proliferation of manipulated media, researchers have developed sophisticated deepfake detection systems augmented with AI content detectors. These systems employ a combination of machine learning algorithms and computer vision techniques to scrutinize videos and images for telltale signs of manipulation. From subtle inconsistencies in facial expressions to anomalies in audio patterns, these detectors meticulously analyze every pixel and waveform to identify any traces of synthetic content. Furthermore, they leverage vast datasets of authentic and manipulated media to continuously refine their detection capabilities, staying one step ahead of evolving manipulation techniques. By integrating deepfake detectors with AI content detectors, we can fortify our defenses against the dissemination of fabricated content, safeguarding the integrity of information in the digital age.
               <br />
-              <br />I am fluent in classics like
+              {/* <br />I am fluent in classics like
               <i>
                 <b className="purple"> C++, Javascript and Go. </b>
               </i>
@@ -49,7 +49,7 @@ function Home2() {
               &nbsp; like
               <i>
                 <b className="purple"> React.js and Next.js</b>
-              </i>
+              </i> */}
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -58,56 +58,7 @@ function Home2() {
             </Tilt>
           </Col>
         </Row>
-        <Row>
-          <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
-            <p>
-              Feel free to <span className="purple">connect </span>with me
-            </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/Soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
-            </ul>
-          </Col>
-        </Row>
+       
       </Container>
     </Container>
   );
