@@ -7,6 +7,10 @@
     {
       "email": "sjc1@gmail.com",
       "password": "$2b$10$FVyLQAENiYgjFSmY8fMfVeH.9upxveUwDGX0mC8bft4wzAO5Ixuem"
+    },
+    {
+      "email": "hello@gmail.com",
+      "password": "$2b$10$wghfLN25MbseKGNyC1ShBOF/.B2X4URTaMDolTYRGKJCJxWymyQgG"
     }
   ]
 }

@@ -23,9 +23,9 @@ function ProjectCards(props) {
           <BsGithub /> &nbsp;
           {props.isBlog ? "Blog" : "GitHub"}
         </Button> */}
-         <Button variant="primary" type="submit">
-      Submit
-    </Button>
+         <Button variant="primary" type="submit" onClick={props.handleSubmit}>
+  Submit
+</Button>
         {"\n"}
         {"\n"}
 
