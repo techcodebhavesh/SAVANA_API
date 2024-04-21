@@ -72,11 +72,22 @@ const ResumeNew = ()=> {
             <Button variant="primary" type="submit" onClick={handleSubmit}>
               Submit
             </Button>
-            {response && <div>{JSON.stringify(response)}</div>}
+       {/* {response && <div>{JSON.stringify(response)}</div>} */}
           </Card.Body>
         </Card>
       </Col>
     </Row>
+
+    <Card>
+      <Card.Body>
+        <Card.Title>Report</Card.Title>
+        <Card.Text style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
+        {response && <pre>{response}</pre>}
+
+        </Card.Text>
+      
+      </Card.Body>
+    </Card>
 
 
           {/*

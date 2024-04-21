@@ -10,7 +10,8 @@ const processEntriesHandler = async (req, res) => {
     console.log(text);
     const textResult=await run(text); // Pass the text input to the run function
      console.log(textResult);
-    res.send(textResult);
+   // res.send(textResult);
+    res.send(JSON.stringify(textResult));
 
   }
   catch (err) {
