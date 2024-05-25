@@ -1,6 +1,6 @@
 import React , { useState }from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "D:/SAVANA_API/client/src/components/Projects/ProjectCards.js";
+//import ProjectCard from "D:/SAVANA_API/client/src/components/Projects/ProjectCards.js";
 import Particle from "../Particle";
 import Form from 'react-bootstrap/Form';
 import leaf from "../../Assets/Projects/leaf.png";

@@ -16,6 +16,7 @@ const db = low(adapter);
 
 import togeminiRouter from "./routers/togemini.router.js";
 import cors from "cors";
+import tolammaRouter from "./routers/tolemma.router.js";
 
 
 const app = express();
@@ -35,6 +36,9 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, "client/build")));
 
 app.use("/api/togemini", togeminiRouter);
+
+
+app.use("/api/tolamma", tolammaRouter);
 app.listen(PORT, () => console.log("Server running on " + PORT));
 
 
