@@ -38,8 +38,8 @@ def save_image_with_text(image, text, output_path):
     font_thickness = 2
     x, y = 50, 50
 
-    image_with_text = cv2.putText(image_cv.copy(), text, (x, y), font, font_scale, font_color, font_thickness)
-    cv2.imwrite(output_path, image_with_text)
+   ## image_with_text = cv2.putText(image_cv.copy(), text, (x, y), font, font_scale, font_color, font_thickness)
+    ## cv2.imwrite(output_path, image_with_text)
 
 def image_pred(image_path, threshold=0.5, model='EfficientNetB4', dataset='DFDC'):
     """
@@ -117,7 +117,7 @@ def generate_summary_report(image_path, prediction, probability, faces_pred, rep
             f.write(line + "\n")
 
 if __name__ == "__main__":
-    image_path = r"D:/SAVANA_API/AI/setup/deepfake/image/img.png"
+    image_path = r"D:/SAVANA_API/AI/setup/deepfake/images/img.png"
     if not os.path.exists(image_path):
         print("Error: Provided image path does not exist.")
         sys.exit(1)
