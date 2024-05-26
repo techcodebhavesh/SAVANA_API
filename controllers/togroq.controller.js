@@ -28,11 +28,17 @@ async function scrapeWebsite(url) {
     }
 }
 
-const processEntriesHandler = async (req, res) => {
+const processEntriesHandler2 = async (req, res) => {
     try {
         const { url } = req.body; // Assuming the URL is provided in the "url" field of the request body
-        console.log(url);
-        
+
+        if (!url) {
+            res.status(400).send('URL is required');
+            return;
+        }
+
+        console.log('Scraping URL:', url);
+
         // Scrape the website to extract the content
         const text = await scrapeWebsite(url);
         console.log('Scraped content:', text);
@@ -43,10 +49,11 @@ const processEntriesHandler = async (req, res) => {
         console.log(textResult);
         res.send(JSON.stringify(textResult));
     } catch (err) {
+        console.error('Error processing entry:', err);
         res.status(500).send(err.message);
     }
 };
 
 module.exports = {
-    processEntriesHandler
+    processEntriesHandler2
 };

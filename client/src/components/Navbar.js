@@ -105,6 +105,16 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/blog"
+                onClick={() => updateExpanded(false)}
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Blog AI Content
+              </Nav.Link>
+            </Nav.Item>
+
             {/* <Nav.Item>
               <Nav.Link
                 href="https://soumyajitblogs.vercel.app/"
