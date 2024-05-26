@@ -19,6 +19,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Lamma from "./components/Lamma/lamma";
 import Bloggroq from "./components/bloggroq/Bloggroq";
+import Word from "./components/Word/Word";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -72,6 +73,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/lamma" element={<Lamma />} />
           <Route path="/blog" element={<Bloggroq />} />
+          <Route path="/word" element={<Word />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

@@ -4,6 +4,8 @@ const path = require('path');
 const outputDirectory = 'D:/SAVANA_API/AI/setup/deepfake/video';
 const newFileName = 'testv.mp4';
 
+
+
 const processVideoFile = (inputFile) => {
     if (fs.existsSync(inputFile)) {
         try {
@@ -48,34 +50,36 @@ const deleteVideoHandler = (req, res) => {
 };
 
 
-const processPythonCodeHandler = (req, res) => {
-    // Command to execute the Python script
-    const pythonCommand = 'python your_script.py'; // Replace 'your_script.py' with the actual filename
 
-    // Execute the Python script
-    exec(pythonCommand, (error, stdout, stderr) => {
-        if (error) {
-            console.error(`Error executing Python script: ${error.message}`);
-            res.status(500).send(`Error executing Python script: ${error.message}`);
-            return;
-        }
-        if (stderr) {
-            console.error(`Python script returned an error: ${stderr}`);
-            res.status(500).send(`Python script returned an error: ${stderr}`);
-            return;
-        }
+// const processPythonCodeHandler = (req, res) => {
+//     // Command to execute the Python script
+//     const pythonCommand = 'python your_script.py'; // Replace 'your_script.py' with the actual filename
+
+//     // Execute the Python script
+//     exec(pythonCommand, (error, stdout, stderr) => {
+//         if (error) {
+//             console.error(`Error executing Python script: ${error.message}`);
+//             res.status(500).send(`Error executing Python script: ${error.message}`);
+//             return;
+//         }
+//         if (stderr) {   
+//             console.error(`Python script returned an error: ${stderr}`);
+//             res.status(500).send(`Python script returned an error: ${stderr}`);
+//             return;
+//         }
         
-        // Process the output from the Python script if needed
-        console.log(`Python script output: ${stdout}`);
+//         // Process the output from the Python script if needed
+//         console.log(`Python script output: ${stdout}`);
         
-        // Send a success response
-        res.send({ message: 'Python code executed successfully' });
-    });
-};
+//         // Send a success response
+//         res.send({ message: 'Python code executed successfully' });
+//     });
+// };
 
 
 module.exports = {
     processVideoHandler,
     deleteVideoHandler,
-    processPythonCodeHandler
+   
+    
 };

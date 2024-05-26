@@ -19,6 +19,7 @@ import cors from "cors";
 import tolammaRouter from "./routers/tolemma.router.js";
 import savevRouter from "./routers/savev.router.js";
 import togroqRouter from "./routers/togroq.router.js";
+import savefRouter from "./routers/savef.router.js";
 
 
 const app = express();
@@ -43,6 +44,7 @@ app.use("/api/togemini", togeminiRouter);
 app.use("/api/tolamma", tolammaRouter);
 app.use("/api/savev", savevRouter);
 app.use("/api/togroq", togroqRouter);
+app.use("/api/savef", savefRouter)
 app.listen(PORT, () => console.log("Server running on " + PORT));
 
 
