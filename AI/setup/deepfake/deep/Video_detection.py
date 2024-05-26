@@ -66,8 +66,8 @@ def video_pred(video_path, threshold=0.5, model='EfficientNetB4', dataset='DFDC'
 
     # Loading the face detector
     facedet = BlazeFace().to(device)
-    facedet.load_weights("blazeface/blazeface.pth")
-    facedet.load_anchors("blazeface/anchors.npy")
+    facedet.load_weights("D:/SAVANA_API/AI/setup/deepfake/deep/blazeface/blazeface.pth")
+    facedet.load_anchors("D:/SAVANA_API/AI/setup/deepfake/deep/blazeface/anchors.npy")
 
     # Initializing the video reader and face extractor
     videoreader = VideoReader(verbose=False)
@@ -94,8 +94,8 @@ def video_pred(video_path, threshold=0.5, model='EfficientNetB4', dataset='DFDC'
         if len(middle_frame['faces']) > 0:
             frame_image = middle_frame['faces'][0]
             frame_image = cv2.cvtColor(np.array(frame_image), cv2.COLOR_RGB2BGR)
-            output_image_path = os.path.join(os.path.dirname(video_path), 'video3.jpg')
-            save_frame_with_text(frame_image, prediction, output_image_path)
+           ## output_image_path = os.path.join(os.path.dirname(video_path), 'video3.jpg')
+            ##save_frame_with_text(frame_image, prediction, "D:/SAVANA_API/AI/setup/deepfake/images/video3.jpg")
 
     return prediction, probability, faces_fake_pred
 
@@ -137,7 +137,7 @@ def generate_summary_report(video_path, prediction, probability, faces_fake_pred
             f.write(line + "\n")
 
 if __name__ == "__main__":
-    video_path = r"C:\Users\athar\Desktop\edi\Celeb-synthesis\id0_id1_0001.mp4"
+    video_path = r"D:/SAVANA_API/AI/setup/deepfake/video/testv.mp4"
     if not os.path.exists(video_path):
         print("Error: Provided video path does not exist.")
         sys.exit(1)

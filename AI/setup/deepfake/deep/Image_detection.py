@@ -59,8 +59,8 @@ def image_pred(image_path, threshold=0.5, model='EfficientNetB4', dataset='DFDC'
     transf = utils.get_transformer(face_policy, face_size, net.get_normalizer(), train=False)
 
     facedet = BlazeFace().to(device)
-    facedet.load_weights("blazeface/blazeface.pth")
-    facedet.load_anchors("blazeface/anchors.npy")
+    facedet.load_weights("D:/SAVANA_API/AI/setup/deepfake/deep/blazeface/blazeface.pth")
+    facedet.load_anchors("D:/SAVANA_API/AI/setup/deepfake/deep/blazeface/anchors.npy")
     face_extractor = FaceExtractor(facedet=facedet)
 
     im_real = Image.open(image_path).convert("RGB")
@@ -117,7 +117,7 @@ def generate_summary_report(image_path, prediction, probability, faces_pred, rep
             f.write(line + "\n")
 
 if __name__ == "__main__":
-    image_path = r"C:\Users\athar\Desktop\deepfake1.png"
+    image_path = r"D:/SAVANA_API/AI/setup/deepfake/image/img.png"
     if not os.path.exists(image_path):
         print("Error: Provided image path does not exist.")
         sys.exit(1)
@@ -126,7 +126,7 @@ if __name__ == "__main__":
     prediction, probability, faces_pred = image_pred(image_path, model='EfficientNetB4')
 
     # Print the prediction result
-    print(f"The given image is {prediction} with a probability of {probability:.2f}")
+    print(f"The given image is {prediction} ")
 
     # Generate and save the summary report
     generate_summary_report(image_path, prediction, probability, faces_pred)
