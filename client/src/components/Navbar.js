@@ -62,10 +62,20 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="/apikey"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> API Key
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> Documentation
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> Docs
               </Nav.Link>
             </Nav.Item>
 
@@ -91,7 +101,7 @@ function NavBar() {
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                AIc
+                AI Text Detector
               </Nav.Link>
             </Nav.Item>
 
@@ -101,14 +111,14 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> AI Content
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Image AI Detector
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/word"
+                to="/word "
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Research Paper AI Content

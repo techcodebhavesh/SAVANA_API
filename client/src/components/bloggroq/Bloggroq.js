@@ -58,9 +58,9 @@ const Bloggroq = ()=> {
         <Card className="project-card-view">
           <Card.Img variant="top" src={chatify} alt="card-img" />
           <Card.Body>
-            <Card.Title>Project Title</Card.Title>
+            <Card.Title>Blog AI Detection</Card.Title>
             <Card.Text style={{ textAlign: "justify" }}>
-              Project Description
+              Please enter the link of the blog you want to analyze.
             </Card.Text>
             <Form.Control
               type="text"

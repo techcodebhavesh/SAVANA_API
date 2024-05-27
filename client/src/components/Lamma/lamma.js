@@ -58,9 +58,9 @@ const Lamma= ()=> {
         <Card className="project-card-view">
           <Card.Img variant="top" src={chatify} alt="card-img" />
           <Card.Body>
-            <Card.Title>Project Title</Card.Title>
+            <Card.Title>AI Text Detection</Card.Title>
             <Card.Text style={{ textAlign: "justify" }}>
-              Project D
+              Please enter the text you want to analyze.
             </Card.Text>
             <Form.Control
               type="text"

@@ -82,9 +82,9 @@ const Projects = () => {
                         <Card className="project-card-view">
                             <Card.Img variant="top" src={chatify} alt="card-img" />
                             <Card.Body>
-                                <Card.Title>Project Title</Card.Title>
+                                <Card.Title>Research Paper AI Detection</Card.Title>
                                 <Card.Text style={{ textAlign: "justify" }}>
-                                    Project Description
+                                   
                                     </Card.Text>
                                     <Form.Group>
                                         <Form.Label>Upload a docx</Form.Label>

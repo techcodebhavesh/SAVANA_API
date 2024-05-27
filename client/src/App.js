@@ -20,6 +20,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Lamma from "./components/Lamma/lamma";
 import Bloggroq from "./components/bloggroq/Bloggroq";
 import Word from "./components/Word/Word";
+import Api from "./components/APIkey/Api";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -74,6 +75,7 @@ function App() {
           <Route path="/lamma" element={<Lamma />} />
           <Route path="/blog" element={<Bloggroq />} />
           <Route path="/word" element={<Word />} />
+          <Route path="/apikey" element={<Api />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

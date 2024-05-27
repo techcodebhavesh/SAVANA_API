@@ -67,27 +67,32 @@ const Login = (props) => {
       }
       
       // Log in a user using email and password
-      const logIn = () => {
-        fetch('http://localhost:5003/auth', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email, password }),
-        })
-          .then((r) => r.json())
-          .then((r) => {
-            if ('success' === r.message) {
-              localStorage.setItem('user', JSON.stringify({ email, token: r.token }))
-              props.setLoggedIn(true)
-              props.setEmail(email)
-              navigate('/')
-            } else {
-              window.alert('Wrong email or password')
-            }
-          })
+     // Log in a user using email and password
+const logIn = () => {
+  fetch('http://localhost:5003/auth', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email, password }),
+  })
+    .then((r) => r.json())
+    .then((r) => {
+      if ('success' === r.message) {
+        // Save user information in local storage
+        const userData = { email, token: r.token };
+        localStorage.setItem('user', JSON.stringify(userData));
+        
+        // Update state to reflect user login
+        props.setLoggedIn(true);
+        props.setEmail(email);
+        navigate('/');
+      } else {
+        window.alert('Wrong email or password');
       }
-  
+    })
+}
+
   return (
     <div className={'mainContainer'}>
       <div className={'titleContainer'}>
