@@ -21,8 +21,10 @@ const Bloggroq = ()=> {
   const [textBoxValue, setTextBoxValue] = useState('');
   
   const [response, setResponse] = useState(null);
+  const [loading, setLoading] = useState(false); // Define loading state
 
   const handleSubmit = async () => {
+    setLoading(true); // Set loading to true when process starts
     try {
       const response = await fetch('http://localhost:5003/api/togroq/process1', {
         method: 'POST',
@@ -40,6 +42,8 @@ const Bloggroq = ()=> {
       setResponse(data);
     } catch (error) {
       console.error('Failed to send text:', error);
+    }finally {
+      setLoading(false); // Set loading to false when process ends
     }
   };
   return (  
@@ -82,14 +86,17 @@ const Bloggroq = ()=> {
       <Card.Body>
         <Card.Title>Report</Card.Title>
         <Card.Text style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
-        {response && <pre>{response}</pre>}
-
-        </Card.Text>
+              {loading ? (
+                <div>Loading...</div>
+              ) : (
+                response && <pre>{response}</pre>
+              )}
+            </Card.Text>
       
       </Card.Body>
     </Card>
 
-
+    {response && <pre>{response}</pre>}
           {/*
 
           <Col md={4} className="project-card">

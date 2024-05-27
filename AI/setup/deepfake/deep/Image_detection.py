@@ -38,8 +38,8 @@ def save_image_with_text(image, text, output_path):
     font_thickness = 2
     x, y = 50, 50
 
-   ## image_with_text = cv2.putText(image_cv.copy(), text, (x, y), font, font_scale, font_color, font_thickness)
-    ## cv2.imwrite(output_path, image_with_text)
+    image_with_text = cv2.putText(image_cv.copy(), text, (x, y), font, font_scale, font_color, font_thickness)
+    cv2.imwrite(output_path, image_with_text)
 
 def image_pred(image_path, threshold=0.5, model='EfficientNetB4', dataset='DFDC'):
     """
@@ -80,9 +80,9 @@ def image_pred(image_path, threshold=0.5, model='EfficientNetB4', dataset='DFDC'
 
     return prediction, probability, faces_pred
 
-def generate_summary_report(image_path, prediction, probability, faces_pred, report_path="summary_report_img.txt"):
+def generate_summary_report(image_path, prediction, probability, faces_pred):
     """
-    Generate a detailed summary report of the prediction.
+    Generate a detailed summary report of the prediction and print it to the terminal.
     """
     metadata = get_image_metadata(image_path)
     prediction_consistency = sum(1 for score in faces_pred if (score > 0.5 and prediction == 'fake') or (score <= 0.5 and prediction == 'real'))
@@ -112,9 +112,9 @@ def generate_summary_report(image_path, prediction, probability, faces_pred, rep
     report.append(f"Max: {confidence_stats['max']:.4f}")
     report.append(f"Timestamp: {datetime.now().isoformat()}")
 
-    with open(report_path, 'w') as f:
-        for line in report:
-            f.write(line + "\n")
+    # Print the report
+    for line in report:
+        print(line)
 
 if __name__ == "__main__":
     image_path = r"D:/SAVANA_API/AI/setup/deepfake/images/img.png"
@@ -126,9 +126,9 @@ if __name__ == "__main__":
     prediction, probability, faces_pred = image_pred(image_path, model='EfficientNetB4')
 
     # Print the prediction result
-    print(f"The given image is {prediction} ")
+    print(f"The given image is {prediction} with a probability of {probability:.2f}")
 
-    # Generate and save the summary report
+    # Generate and print the summary report
     generate_summary_report(image_path, prediction, probability, faces_pred)
 
     # Save the image with the prediction text

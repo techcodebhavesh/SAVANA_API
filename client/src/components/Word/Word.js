@@ -9,6 +9,7 @@ import chatify from "../../Assets/Projects/chatify.png";
 const Projects = () => {
     const [wordFile, setWordFile] = useState(null);
     const [pythondata, setPythonData] = useState(null); // Define pythondata state
+    const [loading, setLoading] = useState(false); // Define loading state
 
     const handleSubmit = async () => {
         const formData = new FormData();
@@ -25,8 +26,10 @@ const Projects = () => {
             }
 
             console.log('Word file uploaded successfully');
+            alert('Word file uploaded successfully');
         } catch (error) {
             console.error('Failed to upload word file:', error);
+            alert('Failed to upload word file:', error);
         }
     };
 
@@ -41,12 +44,15 @@ const Projects = () => {
             }
 
             console.log('Video file deleted successfully');
+            alert('Video file deleted successfully');
         } catch (error) {
             console.error('Failed to delete video file:', error);
+            alert('Failed to delete video file:', error);
         }
     };
 
     const handleProcess = async () => {
+        setLoading(true); // Set loading to true when process starts
         try {
             const response = await fetch('http://localhost:5009/pythonword', {
                 method: 'POST',
@@ -63,6 +69,8 @@ const Projects = () => {
 
         } catch (error) {
             console.error('Failed to execute Python code:', error);
+        }finally {
+            setLoading(false); // Set loading to false when process ends
         }
     };
 
@@ -113,8 +121,12 @@ const Projects = () => {
     <Card.Body>
         <Card.Title>Report</Card.Title>
         <Card.Text style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
-            {pythondata && pythondata.output && <pre>{pythondata.output}</pre>}
-        </Card.Text>
+                            {loading ? (
+                                <div>Loading...</div>
+                            ) : (
+                                pythondata && pythondata.output && <pre>{pythondata.output}</pre>
+                            )}
+                        </Card.Text>
     </Card.Body>
 </Card>
             </Container>

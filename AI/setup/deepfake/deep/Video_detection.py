@@ -1,4 +1,3 @@
-
 import torch
 from torch.utils.model_zoo import load_url
 from scipy.special import expit
@@ -22,7 +21,7 @@ def get_video_metadata(video_path):
     if not cap.isOpened():
         raise ValueError("Error opening video file.")
     frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    fps = cap.get(cv2.CAP_PROP_FPS)
+    fps = int(cap.get(cv2.CAP_PROP_FPS))
     duration = frame_count / fps
     cap.release()
     return {
@@ -99,9 +98,9 @@ def video_pred(video_path, threshold=0.5, model='EfficientNetB4', dataset='DFDC'
 
     return prediction, probability, faces_fake_pred
 
-def generate_summary_report(video_path, prediction, probability, faces_fake_pred, report_path="summary_report3.txt"):
+def generate_summary_report(video_path, prediction, probability, faces_fake_pred):
     """
-    Generate a detailed summary report of the prediction.
+    Generate a detailed summary report of the prediction and print it to the terminal.
     """
     metadata = get_video_metadata(video_path)
     frame_predictions = ['fake' if score > 0.5 else 'real' for score in faces_fake_pred]
@@ -132,9 +131,9 @@ def generate_summary_report(video_path, prediction, probability, faces_fake_pred
     report.append(f"Max: {confidence_stats['max']:.4f}")
     report.append(f"Timestamp: {datetime.now().isoformat()}")
 
-    with open(report_path, 'w') as f:
-        for line in report:
-            f.write(line + "\n")
+    # Print the report
+    for line in report:
+        print(line)
 
 if __name__ == "__main__":
     video_path = r"D:/SAVANA_API/AI/setup/deepfake/video/testv.mp4"
@@ -148,16 +147,8 @@ if __name__ == "__main__":
     # Print the prediction result
     print(f"The given video is {prediction} with a probability of {probability:.2f}")
 
-    # Generate and save the summary report
+    # Generate and print the summary report
     generate_summary_report(video_path, prediction, probability, faces_fake_pred)
 
     # Save the middlemost frame with the prediction text
     print("Middlemost frame with the prediction text has been saved.")
-
-
-
-
-
-
-
-
