@@ -11,7 +11,7 @@ This project presents the design and implementation of a comprehensive system fo
 3. AI Content Detection
 4. AI Content Detection in Research Papers
 5. AI Content Detection in Blogs
-This README outlines the technical aspects and provides an overview of the experimental results for each feature, demonstrating the efficacy of our approach in combating deceptive AI content.
+-This README outlines the technical aspects and provides an overview of the experimental results for each feature, demonstrating the efficacy of our approach in combating deceptive AI content.
 
 ## Features
 
@@ -29,12 +29,12 @@ Uses LLaMA 3 to analyze and identify AI-generated content in blogs, ensuring the
 
 
 ## Requirements
-tensorflow
-keras
-numpy
-opencv-python
-blazeface
-efficientnet
+-tensorflow
+-keras
+-numpy
+-opencv-python
+-blazeface
+-efficientnet
 
 text detection libraries:
 - os
