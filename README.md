@@ -29,12 +29,12 @@ Uses LLaMA 3 to analyze and identify AI-generated content in blogs, ensuring the
 
 
 ## Requirements
--tensorflow
--keras
--numpy
--opencv-python
--blazeface
--efficientnet
+- tensorflow
+- keras
+- numpy
+- opencv-python
+- blazeface
+- efficientnet
 
 text detection libraries:
 - os
