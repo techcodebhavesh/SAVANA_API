@@ -13,6 +13,10 @@ This project presents the design and implementation of a comprehensive system fo
 5. AI Content Detection in Blogs
 -This README outlines the technical aspects and provides an overview of the experimental results for each feature, demonstrating the efficacy of our approach in combating deceptive AI content.
 
+## Demo:
+![Demo](demo1.gif)
+
+
 ## Flowchart:
 ![Flowchart](flowchart.jpg)
 
