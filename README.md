@@ -1,6 +1,6 @@
 # SAVANA_API
 SAVANA: Secure AI Verification And Non-deceptive Analysis
-
+ 
 SAVANA API, encompassing four key features: image deepfake detection, video deepfake detection, AI content detection in research papers, and AI content detection in blogs. Utilizing advanced machine learning models and natural language processing techniques, our system ensures reliable and accurate identification of AI-generated content, thus enhancing the integrity and trustworthiness of digital media. The proposed methodology includes the use of BlazeFace for face detection, EfficientNetB4 for regression tasks, fine-tuned vectorizers with logistic regression for text analysis, and LLaMA 3 for nuanced linguistic pattern detection. This study outlines the technical aspects and experimental results of each feature, demonstrating the efficacy of our approach in combating deceptive AI content.
 
 
