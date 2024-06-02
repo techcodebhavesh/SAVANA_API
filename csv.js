@@ -1,7 +1,7 @@
 const Groq = require('groq');
 
 const api = new Groq({
-  apiKey: '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'
+  apiKey: '#|#'
 });
 
 const csvFile = 'D:/SAVANA_API/Training_Essay_Data.csv'; // replace with your CSV file path
